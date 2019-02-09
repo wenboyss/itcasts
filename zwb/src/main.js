@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Element from 'element-ui'
+import MyBread from '@/layout/bread.vue'
 // import axios from 'axios'
 import myaxios from '@/assets/js/myaxios.js'
 import 'element-ui/lib/theme-chalk/index.css'
@@ -15,6 +16,9 @@ import '@/assets/css/index.css'
 // Vue.prototype.$http = axios
 Vue.use(myaxios)
 Vue.use(Element)
+
+// 注册全局面包屑导航组件
+Vue.component(MyBread.name, MyBread)
 
 Vue.config.productionTip = false
 
